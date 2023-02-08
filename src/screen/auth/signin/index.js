@@ -17,6 +17,12 @@ const Signin = ({ navigation }) => {
     }
 
     const onSubmit = () => {
+
+        if (!values.email || !values.password) {
+            alert('Please enter Email and Password');
+            return;
+        }
+
         auth().signInWithEmailAndPassword(values.email, values.password).then(() => {
             console.log('User Singin successfully');
         }).catch(error => {
