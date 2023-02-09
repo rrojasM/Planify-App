@@ -11,6 +11,7 @@ import Signup from './screen/auth/signup';
 import Home from './screen/app/Home';
 import AddTask from './screen/app/AddTask';
 import Tasks from './screen/app/Tasks';
+import DrawerComponent from './components/drawerComponent';
 
 
 const Stack = createStackNavigator();
@@ -40,31 +41,18 @@ const Routes = () => {
         return null
     }
 
-    /*   if (user) {
-          const logout = () => {
-              auth().signOut().then(() => console.log("User signed out!"));
-          }
-          return (
-              <>
-                  <Text style={{ margin: 40 }}>Welcome</Text>
-                  <Text style={{ margin: 40 }} onPress={logout}>Log out</Text>
-  
-              </>
-          )
-      } */
-
     const Tabs = () => (
         <Tab.Navigator screenOptions={{ tabBarShowLabel: false }}>
             <Tab.Screen name="Home" component={Home} options={{
                 headerShown: false,
-                tabBarIcon: () => (
-                    <Image style={styles.icon} source={require('./assets/home_inactive.png')} />
+                tabBarIcon: ({ focused }) => (
+                    <Image style={styles.icon} source={focused ? require('./assets/home_active.png') : require('./assets/home_inactive.png')} />
                 )
             }} />
             <Tab.Screen name="Tasks" component={Tasks} options={{
                 headerShown: false,
-                tabBarIcon: () => (
-                    <Image style={styles.icon} source={require('./assets/calendar_inactive.png')} />
+                tabBarIcon: ({ focused }) => (
+                    <Image style={styles.icon} source={focused ? require('./assets/calendar_active.png') : require('./assets/calendar_inactive.png')} />
                 )
             }} />
         </Tab.Navigator>
@@ -72,7 +60,7 @@ const Routes = () => {
 
     if (user) {
         return (
-            <Drawer.Navigator>
+            <Drawer.Navigator drawerContent={props => <DrawerComponent {...props} />}>
                 <Drawer.Screen name="Tabs" component={Tabs} />
                 <Drawer.Screen name="AddTask" component={AddTask} />
             </Drawer.Navigator>
