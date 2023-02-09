@@ -16,6 +16,7 @@ function DrawerContent(props) {
     /*  console.log('====================================');
      console.log(JSON.stringify(props));
      console.log('===================================='); */
+
     return (
 
         <DrawerContentScrollView {...props}>
