@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
         marginHorizontal: 24,
         fontWeight: '500',
         marginTop: 12
+    },
+    button: {
+        margin: 24,
     }
 });
 
