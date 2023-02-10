@@ -3,7 +3,6 @@ import colors from '../../../constants/colors';
 const { height } = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
     },
     backContainer: {
         padding: 24,
@@ -16,7 +15,8 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: colors.black,
         marginHorizontal: 24,
-        fontWeight: '500'
+        fontWeight: '500',
+        marginTop: 12
     }
 });
 
