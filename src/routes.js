@@ -12,6 +12,8 @@ import Home from './screen/app/Home';
 import AddTask from './screen/app/AddTask';
 import Tasks from './screen/app/Tasks';
 import DrawerComponent from './components/drawerComponent';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUser } from './store/user';
 
 
 const Stack = createStackNavigator();
@@ -21,12 +23,16 @@ const Tab = createBottomTabNavigator();
 
 const Routes = () => {
 
+    const dispatch = useDispatch();
     const [initializing, setInitializing] = useState(true);
-    const [user, setUser] = useState();
+    //const [user, setUser] = useState();
+
+    const user = useSelector(state => state.user.data);
 
 
     function onAuthStateChanged(user) {
-        setUser(user);
+        //setUser(user);
+        dispatch(setUser(user));
         if (initializing) {
             setInitializing(false);
         }

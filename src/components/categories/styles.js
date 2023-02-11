@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     selectedItemContainer: {
         borderColor: colors.lightGrey,
         backgroundColor: colors.lightGrey,
-        //borderRadius: 10
+        borderRadius: 10
     }
 });
 

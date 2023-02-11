@@ -10,8 +10,10 @@ import Categories from '../../../components/categories';
 import { categories } from '../../../constants/categories';
 import DateInput from '../../../components/dateInput';
 import moment from 'moment';
+import { useSelector } from 'react-redux';
 
 const AddTask = ({ navigation }) => {
+    const user = useSelector(state => state.user.data);
     const [title, setTitle] = useState('')
     const [category, setCategory] = useState();
     const [deadline, setDeadline] = useState(new Date());
@@ -38,7 +40,7 @@ const AddTask = ({ navigation }) => {
         setLoading(true);
         firestore()
             .collection('Task')
-            .doc('ABC')
+            .doc(user?.uid)
             .set({
                 title,
                 deadline,

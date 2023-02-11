@@ -2,8 +2,10 @@ import 'react-native-gesture-handler';
 import React, { useEffect, useState } from 'react';
 import { Text } from 'react-native';
 import { NavigationContainer, DefaultNavigatorOptions, DefaultTheme } from '@react-navigation/native';
+import { Provider } from 'react-redux';
 import auth from '@react-native-firebase/auth';
 import Routes from './src/routes';
+import store from './src/store';
 
 const App = () => {
   const theme = {
@@ -39,9 +41,11 @@ const App = () => {
    } */
 
   return (
-    <NavigationContainer theme={theme}>
-      <Routes />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer theme={theme}>
+        <Routes />
+      </NavigationContainer>
+    </Provider>
   );
 };
 
