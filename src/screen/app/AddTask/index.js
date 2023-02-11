@@ -39,12 +39,13 @@ const AddTask = ({ navigation }) => {
 
         setLoading(true);
         firestore()
-            .collection('Task')
-            .doc(user?.uid)
-            .set({
+            .collection('Tasks')
+            .add({
                 title,
                 deadline,
-                category
+                category,
+                checked: false,
+                userId: user?.uid
             })
             .then(() => {
                 setLoading(false);
