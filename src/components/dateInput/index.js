@@ -16,7 +16,7 @@ const DateInput = ({ value, onChange, ...props }) => {
         <>
             <TouchableOpacity onPress={onDateOpen} style={styles.outlined}>
                 <Image resizeMode='contain' style={styles.icon} source={require('../../assets/calendar.png')} />
-                <Text style={styles.text}>{moment(value).format('L') || 'Select Date...'}</Text>
+                <Text style={styles.text}>{moment(value).format('L') || 'Seleccione fecha...'}</Text>
             </TouchableOpacity>
 
             <DatePicker

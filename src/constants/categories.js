@@ -1,22 +1,22 @@
 export const categories = [
     {
-        label: 'Quick Task',
+        label: 'Tarea Rápida',
         value: 'quick_task'
     },
     {
-        label: 'Urgent',
+        label: 'Urgente',
         value: 'urgent'
     },
     {
-        label: 'Important',
+        label: 'Importante',
         value: 'important'
     },
     {
-        label: 'Nice to Have',
+        label: 'Agradable de tener',
         value: 'nice_to_have'
     },
     {
-        label: 'Low Priority',
+        label: 'Prioridad Baja',
         value: 'low_priority'
     }
 ]

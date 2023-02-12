@@ -30,12 +30,12 @@ const AddTask = ({ navigation }) => {
         const deadlineFormatted = moment(deadline).format('YYYY-MM-DD');
 
         if (!title) {
-            Alert.alert('Please enter the task title');
+            Alert.alert('Por favor, ingrese el título de la tarea');
             return;
         }
 
         if (moment(deadlineFormatted).isBefore(today)) {
-            Alert.alert('Please enter future date');
+            Alert.alert('Por favor, introduzca una fecha futura');
             return;
         }
 
@@ -71,20 +71,20 @@ const AddTask = ({ navigation }) => {
                         <Image style={styles.backIcon} source={require('../../../assets/back.png')} />
                     </Pressable>
 
-                    <Title type="thin">Add New Task</Title>
+                    <Title type="thin">Agregar nueva tarea</Title>
 
-                    <Text style={styles.label}>Describe the task</Text>
-                    <Input value={title} onChangeText={setTitle} outlined placeholder="Type here..." />
+                    <Text style={styles.label}>Describe la tarea</Text>
+                    <Input value={title} onChangeText={setTitle} outlined placeholder="Descripción..." />
 
-                    <Text style={styles.label}>Type</Text>
+                    <Text style={styles.label}>Categoria</Text>
                     <Categories categories={categories} selectedCategory={category} onCategoryPress={setCategory} />
 
-                    <Text style={styles.label}>Deadline</Text>
+                    <Text style={styles.label}>Fecha limite</Text>
                     <DateInput value={deadline} onChange={setDeadline} />
 
                     {
                         loading ? <ActivityIndicator /> : (
-                            <Button style={styles.button} type="blue" onPress={onSubmit}>Add the Task</Button>
+                            <Button style={styles.button} type="blue" onPress={onSubmit}>Agregar Tarea</Button>
                         )
                     }
                 </ScrollView>

@@ -64,17 +64,17 @@ const Home = ({ navigation }) => {
     return (
         <>
             <SafeAreaView style={styles.container}>
-                <Header title="Home" />
+                <Header title="Inicio" />
                 <ScrollView>
-                    <Title type="thin">Daily Tasks:</Title>
+                    <Title type="thin">Tareas diarias:</Title>
                     <View style={styles.row}>
-                        <StatusCard label={"High Priority"} count={counts?.highPriority} />
-                        <StatusCard label={"Due Deadline"} type="error" count={counts?.dueDeadline} />
-                        <StatusCard label={"Quick Win"} count={counts?.quickWin} />
+                        <StatusCard label={"Alta prioridad"} count={counts?.highPriority} />
+                        <StatusCard label={"Tareas Vencidas"} type="error" count={counts?.dueDeadline} />
+                        <StatusCard label={"Completadas"} count={counts?.quickWin} />
                     </View>
                     <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('Tasks')}>
-                        <Text style={styles.title}>Check all my tasks</Text>
-                        <Text style={styles.subTitle}>See all tasks and filter them by categories you have selected when creating them</Text>
+                        <Text style={styles.title}>Consultar todas mis tareas</Text>
+                        <Text style={styles.subTitle}>Ver todas las tareas y filtrarlas por las categorías que hayas seleccionado al crearlas</Text>
                     </TouchableOpacity>
                 </ScrollView>
                 <PlusIcon />

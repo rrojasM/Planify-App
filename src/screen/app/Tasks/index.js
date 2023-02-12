@@ -52,13 +52,13 @@ const Tasks = () => {
     return (
         <>
             <SafeAreaView style={styles.container}>
-                <Header title="Tasks" />
+                <Header title="Tareas" />
 
                 <FlatList
                     ListHeaderComponent={
                         <View style={{ marginBottom: 24 }}>
-                            <Title type="thin">To do Tasks:</Title>
-                            <Categories categories={[{ label: 'All', value: 'all' }, ...categories]} selectedCategory={category} onCategoryPress={setCategory} />
+                            <Title type="thin">Tareas por hacer:</Title>
+                            <Categories categories={[{ label: 'Todas', value: 'all' }, ...categories]} selectedCategory={category} onCategoryPress={setCategory} />
                         </View>
                     }
                     data={filteredTasks}

@@ -29,24 +29,24 @@ const Singup = ({ navigation }) => {
     const onSubmit = () => {
 
         if (!values.firts_name || !values.last_name) {
-            alert('Please enter first name and last name');
+            alert(' Por favor ingrese nombre y apellido');
             return;
         }
 
         if (values.password !== values.confirm_password) {
-            alert('Passwords do not match');
+            alert('Las contraseñas no coinciden');
             return;
         }
 
         if (!agreed) {
-            alert('You should agree to the terms!');
+            alert('Debes aceptar los términos!');
             return;
         }
 
         auth()
             .createUserWithEmailAndPassword(values.email, values.password)
             .then(() => {
-                alert('User Created successfully');
+                alert('Usuario creado exitosamente ');
 
                 auth().currentUser.updateProfile({ displayName: `${values.firts_name} ${values.last_name}` })
                 //navigation.navigate('Signin')
@@ -68,28 +68,28 @@ const Singup = ({ navigation }) => {
         <SafeAreaView style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
 
-                <Title>Join th hub!</Title>
+                <Title>Registro!</Title>
 
-                <Input onChangeText={(val) => onChange(val, 'firts_name')} placeholder="First Name" />
-                <Input onChangeText={(val) => onChange(val, 'last_name')} placeholder="Last Name" />
+                <Input onChangeText={(val) => onChange(val, 'firts_name')} placeholder="Nombre" />
+                <Input onChangeText={(val) => onChange(val, 'last_name')} placeholder="Apellido" />
                 <Input onChangeText={(val) => onChange(val, 'email')} placeholder="Email" keyboardType='email-address' />
-                <Input onChangeText={(val) => onChange(val, 'password')} placeholder="Password" secureTextEntry />
-                <Input onChangeText={(val) => onChange(val, 'confirm_password')} placeholder="Confirm Password" secureTextEntry />
+                <Input onChangeText={(val) => onChange(val, 'password')} placeholder="Contraseña" secureTextEntry />
+                <Input onChangeText={(val) => onChange(val, 'confirm_password')} placeholder="Confirmar Contraseña" secureTextEntry />
 
-                <Button onPress={onSubmit} type={'blue'}>Create account</Button>
+                <Button onPress={onSubmit} type={'blue'}>Crear cuenta</Button>
 
                 <View style={styles.row}>
                     <CheckBox checked={agreed} onPress={onCheckboxPress} />
                     <Text style={styles.agreeText}>
-                        I agree to
-                        <Text style={styles.link}> Terms and Conditions</Text> and
-                        <Text style={styles.link}> Privacy Policy</Text>
+                        Acepta
+                        <Text style={styles.link}>Terminos y Condiciones</Text> y
+                        <Text style={styles.link}>Políticas de privacidad</Text>
                     </Text>
                 </View>
 
                 <Text style={styles.footerText}>
-                    Already registered?
-                    <Text onPress={() => { navigation.navigate('Signin') }} style={styles.footerLink}> Sign in!</Text>
+                    Ya estas registrado?
+                    <Text onPress={() => { navigation.navigate('Signin') }} style={styles.footerLink}>Iniciar Sesión!</Text>
                 </Text>
             </ScrollView>
         </SafeAreaView>

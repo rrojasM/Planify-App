@@ -13,11 +13,11 @@ const OnBoarding = ({ navigation }) => {
                 </View>
 
                 <View style={styles.content}>
-                    <Text style={styles.title}>Best task management app</Text>
-                    <Text style={styles.subTitle}>Get organized by sorting out all your tasks and boost your productivity.</Text>
+                    <Text style={styles.title}>La mejor aplicación de gestión de tareas.</Text>
+                    <Text style={styles.subTitle}>Organícese ordenando todas sus tareas y aumente su productividad.</Text>
 
-                    <Button onPress={() => navigation.navigate('Signin')}>Login</Button>
-                    <Button onPress={() => navigation.navigate('Signup')} type={'blue'}>Get Started</Button>
+                    <Button onPress={() => navigation.navigate('Signin')}>Acceso</Button>
+                    <Button onPress={() => navigation.navigate('Signup')} type={'blue'}>Registro</Button>
 
                 </View>
             </View>

@@ -21,11 +21,11 @@ function DrawerContent(props) {
 
         <DrawerContentScrollView {...props}>
             {/*  <DrawerItemList {...props} /> */}
-            <Text style={styles.link} onPress={() => navigation.navigate('Home')}>Home</Text>
-            <Text style={styles.link} onPress={() => navigation.navigate('Tasks')}>Tasks</Text>
-            <Text style={styles.link} onPress={() => Linking.openURL('https://termify.io/privacy-policy-generator?gclid=CjwKCAiA0JKfBhBIEiwAPhZXD3FE3cGnk5hhVyhgKMXl7ky-BenMKZfap_-oEplilIXfN6F4h6erORoCw9YQAvD_BwE')}>Privacy Policy</Text>
-            <Text style={styles.link} onPress={() => Linking.openURL('https://www.notice.studio/create-terms-of-use?utm_source=terms_of_use&utm_medium=1_1&utm_campaign=google_search_ads&gclid=CjwKCAiA0JKfBhBIEiwAPhZXDwi2_uoh8Bmfj-E9LfukVg5SGFI0OdB6SBsZ-Qy9QCBBeklul9bZvBoCFawQAvD_BwE')}>Terms and Conditions</Text>
-            <Text style={styles.link} onPress={logout}>Log out</Text>
+            <Text style={styles.link} onPress={() => navigation.navigate('Home')}>Inicio</Text>
+            <Text style={styles.link} onPress={() => navigation.navigate('Tasks')}>Tareas</Text>
+            <Text style={styles.link} onPress={() => Linking.openURL('https://termify.io/privacy-policy-generator?gclid=CjwKCAiA0JKfBhBIEiwAPhZXD3FE3cGnk5hhVyhgKMXl7ky-BenMKZfap_-oEplilIXfN6F4h6erORoCw9YQAvD_BwE')}>Politicas de privacidad</Text>
+            <Text style={styles.link} onPress={() => Linking.openURL('https://www.notice.studio/create-terms-of-use?utm_source=terms_of_use&utm_medium=1_1&utm_campaign=google_search_ads&gclid=CjwKCAiA0JKfBhBIEiwAPhZXDwi2_uoh8Bmfj-E9LfukVg5SGFI0OdB6SBsZ-Qy9QCBBeklul9bZvBoCFawQAvD_BwE')}>Terminos y condiciones</Text>
+            <Text style={styles.link} onPress={logout}>Cerrar sesión</Text>
 
         </DrawerContentScrollView>
     );

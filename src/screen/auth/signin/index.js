@@ -19,7 +19,7 @@ const Signin = ({ navigation }) => {
     const onSubmit = () => {
 
         if (!values.email || !values.password) {
-            alert('Please enter Email and Password');
+            alert('Por favor ingrese usuario y contraseña');
             return;
         }
 
@@ -39,17 +39,17 @@ const Signin = ({ navigation }) => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Title>Welcome back!</Title>
+            <Title>Bienvenido!</Title>
 
-            <Input placeholder="Email" keyboardType='email-address' onChangeText={(val) => onChange(val, 'email')} />
-            <Input placeholder="Password" secureTextEntry onChangeText={(val) => onChange(val, 'password')} />
+            <Input placeholder="Correo" keyboardType='email-address' onChangeText={(val) => onChange(val, 'email')} />
+            <Input placeholder="Contraseña" secureTextEntry onChangeText={(val) => onChange(val, 'password')} />
 
-            <Button onPress={onSubmit}>Login</Button>
+            <Button onPress={onSubmit}>Iniciar Sesión</Button>
 
 
             <Text style={styles.footerText}>
-                Not registered?
-                <Text onPress={() => { navigation.navigate('Signup') }} style={styles.footerLink}> Sign up!</Text>
+                No estas registrado?
+                <Text onPress={() => { navigation.navigate('Signup') }} style={styles.footerLink}>Registrate!</Text>
             </Text>
         </SafeAreaView>
     )
