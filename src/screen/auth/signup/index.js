@@ -72,7 +72,7 @@ const Singup = ({ navigation }) => {
 
                 <Input onChangeText={(val) => onChange(val, 'firts_name')} placeholder="Nombre" />
                 <Input onChangeText={(val) => onChange(val, 'last_name')} placeholder="Apellido" />
-                <Input onChangeText={(val) => onChange(val, 'email')} placeholder="Email" keyboardType='email-address' />
+                <Input onChangeText={(val) => onChange(val, 'email')} placeholder="Correo electrónico" keyboardType='email-address' />
                 <Input onChangeText={(val) => onChange(val, 'password')} placeholder="Contraseña" secureTextEntry />
                 <Input onChangeText={(val) => onChange(val, 'confirm_password')} placeholder="Confirmar Contraseña" secureTextEntry />
 
@@ -83,13 +83,13 @@ const Singup = ({ navigation }) => {
                     <Text style={styles.agreeText}>
                         Acepta
                         <Text style={styles.link}>Terminos y Condiciones</Text> y
-                        <Text style={styles.link}>Políticas de privacidad</Text>
+                        <Text style={styles.link}> Políticas de privacidad</Text>
                     </Text>
                 </View>
 
                 <Text style={styles.footerText}>
                     Ya estas registrado?
-                    <Text onPress={() => { navigation.navigate('Signin') }} style={styles.footerLink}>Iniciar Sesión!</Text>
+                    <Text onPress={() => { navigation.navigate('Signin') }} style={styles.footerLink}> Iniciar Sesión!</Text>
                 </Text>
             </ScrollView>
         </SafeAreaView>

@@ -41,7 +41,7 @@ const Signin = ({ navigation }) => {
         <SafeAreaView style={styles.container}>
             <Title>Bienvenido!</Title>
 
-            <Input placeholder="Correo" keyboardType='email-address' onChangeText={(val) => onChange(val, 'email')} />
+            <Input placeholder="Correo electrónico" keyboardType='email-address' onChangeText={(val) => onChange(val, 'email')} />
             <Input placeholder="Contraseña" secureTextEntry onChangeText={(val) => onChange(val, 'password')} />
 
             <Button onPress={onSubmit}>Iniciar Sesión</Button>
