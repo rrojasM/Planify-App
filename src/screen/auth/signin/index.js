@@ -49,7 +49,7 @@ const Signin = ({ navigation }) => {
 
             <Text style={styles.footerText}>
                 No estas registrado?
-                <Text onPress={() => { navigation.navigate('Signup') }} style={styles.footerLink}>Registrate!</Text>
+                <Text onPress={() => { navigation.navigate('Signup') }} style={styles.footerLink}> Registrate!</Text>
             </Text>
         </SafeAreaView>
     )
